@@ -3,7 +3,7 @@
 #include <math.h>
 #include "solver_equation.h"
 #include "test_equation.h"
-#include "input_output.h"
+#include "interactive_solver.h"
 #include "colors.h"
 
 int main(int argc, const char* argv[]) {
@@ -11,7 +11,7 @@ int main(int argc, const char* argv[]) {
   // TODO: Maybe you can extract your args processing into something like:
   // if (process_args(...))
   //   return EXIT_FAILURE;
-    
+
 
   if (argc == 1) {
 

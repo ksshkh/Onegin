@@ -2,35 +2,34 @@
 #include "test_equation.h"
 #include "solver_equation.h"
 #include "colors.h"
-#include "input_output.h"
+#include "interactive_solver.h"
 #include "my_assert.h"
 
 void run_tests(void) {
   FILE * test_file = fopen("tests.txt", "r"); // TODO: pass file as an argument
-  ASSERT(test_file != NULL);
+  CHECK(test_file != NULL);
 
   int passed_tests = 0;
-  int test_count = 0;
   int num = 0;
-  solutions expected_roots = {}; // TODO: move closer to declaration?
   coefficients_of_sq_equation coeff = {};
 
   int check_test_count = fscanf(test_file, "%d", &num);
-  ASSERT(check_test_count != 0); // TODO: rename ASSERT or use it differently
-  ASSERT(check_test_count != EOF);
+  CHECK(check_test_count != 0);
+  CHECK(check_test_count != EOF);
 
-  for (int i = 0; i < num; i++) { // TODO: are test_count and i different?
+  solutions expected_roots = {};
+
+  for (int i = 1; i <= num; i++) {
     fscanf(test_file,
           "%lf, %lf, %lf, %lf, %lf, %d",
           &coeff.a, &coeff.b, &coeff.c,
           &expected_roots.x1, &expected_roots.x2, &expected_roots.nroots);
-    test_count++;
 
-    if (test_solver_of_sq_equation(coeff, test_count, expected_roots)) {
+    if (test_solver_of_sq_equation(coeff, i, expected_roots)) {
       passed_tests++;
     }
   }
-  printf(GREEN("%d/%d tests passed!\n"), passed_tests, test_count);
+  printf(GREEN("%d/%d tests passed!\n"), passed_tests, num);
 }
 
 bool test_solver_of_sq_equation(coefficients_of_sq_equation coef,

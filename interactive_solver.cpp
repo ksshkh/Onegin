@@ -1,10 +1,8 @@
 #include <stdio.h>
 #include <assert.h>
 #include "colors.h"
-#include "input_output.h"
-
-
-// TODO: input_output
+#include "interactive_solver.h"
+#include "test_equation.h"
 
 void skip_word(void) {
   int c = 0;

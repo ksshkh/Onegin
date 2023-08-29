@@ -1,7 +1,7 @@
 #ifndef SOLVER_EQUATION
 #define SOLVER_EQUATION
 
-#include "input_output.h"
+#include "interactive_solver.h"
 
 //----------------------------------------------------------------------------------------------
 /// @brief Compare two double numbers

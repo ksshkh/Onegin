@@ -1,8 +1,6 @@
 #ifndef INPUT_OUTPUT
 #define INPUT_OUTPUT
 
-#include "solver_equation.h"
-
 /// @brief Number of roots
 enum num_of_roots {
   NO_ROOTS = 0, ///< No roots

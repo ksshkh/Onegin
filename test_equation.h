@@ -2,7 +2,7 @@
 #define TEST_EQUATION
 
 #include "solver_equation.h"
-#include "input_output.h"
+#include "interactive_solver.h"
 
 //----------------------------------------------------------------------------------------------
 /// @brief Run all tests
