@@ -5,7 +5,10 @@
 #include "input_output.h"
 
 void skip_word(void) {
-  scanf("%*s");
+  int c = 0;
+  do {
+    c = getchar();
+  } while(c != '\n' || c != EOF);
 }
 
 double read_coeff (FILE* file) {
@@ -17,13 +20,13 @@ double read_coeff (FILE* file) {
   return number;
 }
 
-coefficients_of_sq_equation save_coeffs (FILE* file) {
-  coefficients_of_sq_equation coef = {};
-  coef.a = read_coeff(file);
-  coef.b = read_coeff(file);
-  coef.c = read_coeff(file);
+coefficients_of_sq_equation get_coeffs (FILE* file) {
+  coefficients_of_sq_equation coeff = {};
+  coeff.a = read_coeff(file);
+  coeff.b = read_coeff(file);
+  coeff.c = read_coeff(file);
 
-  return coef;
+  return coeff;
 }
 
 void print_results_of_solving(solutions counted_roots) {
