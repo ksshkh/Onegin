@@ -6,20 +6,20 @@
 #include "my_assert.h"
 
 void run_tests(void) {
-  FILE * test_file = fopen("tests.txt", "r");
+  FILE * test_file = fopen("tests.txt", "r"); // TODO: pass file as an argument
   ASSERT(test_file != NULL);
 
   int passed_tests = 0;
   int test_count = 0;
   int num = 0;
-  solutions expected_roots = {};
+  solutions expected_roots = {}; // TODO: move closer to declaration?
   coefficients_of_sq_equation coeff = {};
 
   int check_test_count = fscanf(test_file, "%d", &num);
-  ASSERT(check_test_count != 0);
+  ASSERT(check_test_count != 0); // TODO: rename ASSERT or use it differently
   ASSERT(check_test_count != EOF);
 
-  for (int i = 0; i < num; i++) {
+  for (int i = 0; i < num; i++) { // TODO: are test_count and i different?
     fscanf(test_file,
           "%lf, %lf, %lf, %lf, %lf, %d",
           &coeff.a, &coeff.b, &coeff.c,

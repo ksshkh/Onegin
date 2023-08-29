@@ -8,6 +8,11 @@
 
 int main(int argc, const char* argv[]) {
 
+  // TODO: Maybe you can extract your args processing into something like:
+  // if (process_args(...))
+  //   return EXIT_FAILURE;
+    
+
   if (argc == 1) {
 
     solutions counted_roots = {};
