@@ -13,23 +13,3 @@ test_equation.o: test_equation.cpp solver_equation.h colors.h test_equation.h in
 clean:
 	rm -rf *.o
 	rm -rf solver_square.exe
-
-# TODO: Why so much extra lines?
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

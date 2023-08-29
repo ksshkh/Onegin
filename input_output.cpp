@@ -1,6 +1,5 @@
-#include <TXLib.h> // TODO: Why do you need txlib here?
-#include <math.h>
-#include "solver_equation.h" // TODO: unused header
+#include <stdio.h>
+#include <assert.h>
 #include "colors.h"
 #include "input_output.h"
 
