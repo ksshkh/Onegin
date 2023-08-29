@@ -44,13 +44,13 @@ double read_coeff(FILE* file);
 ///
 /// @return Structure with value of coefficients
 //----------------------------------------------------------------------------------------------
-coefficients_of_sq_equation save_coefs_in_structure(FILE* file);
+coefficients_of_sq_equation save_coeffs(FILE* file);
 
 //----------------------------------------------------------------------------------------------
 /// @brief Output results of program
 ///
-/// @param [in]  real_root   The structure with value of roots (x1, x2) and their number (nroots)
+/// @param [in]  counted_roots   The structure with value of roots (x1, x2) and their number (nroots)
 //----------------------------------------------------------------------------------------------
-void print_results_of_solving(solutions real_root);
+void print_results_of_solving(solutions counted_roots);
 
 #endif
