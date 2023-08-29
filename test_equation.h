@@ -14,12 +14,12 @@ void run_tests(void);
 ///
 /// @param [in]  coef   Coefficients of the equation (a, b, c)
 /// @param [in]  expected_root   Expected roots and their number (x1_exp, x2_exp, num_exp)
-/// @param [out] counted_root  Recieved roots of the equation (x1, x2)
+/// @param [in]  test_count  Number of test
 ///
 /// @return True if the numbers are equal and false in other case
 //----------------------------------------------------------------------------------------------
 bool test_solver_of_sq_equation(coefficients_of_sq_equation coef,
-                                solutions* counted_roots,
+                                int test_count,
                                 solutions expected_roots);
 
 #endif
