@@ -17,17 +17,17 @@ bool compare_doubles(double x, double y);
 /// @brief Solves a square equation ax^2 + bx + c = 0
 ///
 /// @param [in]  coef   Coefficients of the equation (a, b, c)
-/// @param [out] real_root  Roots of the equation (x1, x2) and number of root (nroots)
+/// @param [out] counted_roots  Roots of the equation (x1, x2) and number of root (nroots)
 ///
 /// @note If a = 0, the solve_of_linear_equation function is called
 //----------------------------------------------------------------------------------------------
-void solve_of_sq_equation(coefficients_of_sq_equation coef, solutions* real_root);
+void solve_of_sq_equation(coefficients_of_sq_equation coef, solutions* counted_roots);
 
 //----------------------------------------------------------------------------------------------
 /// @brief Solves a line equation bx + c = 0
 ///
-/// @param [out] real_root  Roots of the equation (x1, x2) and number of rootd (nroots)
+/// @param [out] counted_roots  Roots of the equation (x1, x2) and number of rootd (nroots)
 //----------------------------------------------------------------------------------------------
-void solve_of_linear_equation(coefficients_of_sq_equation coef, solutions* real_root);
+void solve_of_linear_equation(coefficients_of_sq_equation coef, solutions* counted_roots);
 
 #endif
