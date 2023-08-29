@@ -1,4 +1,5 @@
-#include <TXLib.h>
+#include <stdio.h>
+#include <string.h>
 #include <math.h>
 #include "solver_equation.h"
 #include "test_equation.h"
@@ -24,7 +25,7 @@ int main(int argc, const char* argv[]) {
   }
 
   else if (strcmp(argv[1], "--help") == 0) {
-    printf("Enter --test to test the programm");
+    printf("Enter --test to test the program\n");
     return 0;
   }
 
@@ -34,7 +35,7 @@ int main(int argc, const char* argv[]) {
   }
 
   else {
-    printf("Run programm again and enter --test or --help");
+    printf("Run programm again and enter --test or --help\n");
     return 0;
   }
 }

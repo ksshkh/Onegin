@@ -1,5 +1,6 @@
-#include <TXLib.h>
+#include <stdio.h>
 #include <math.h>
+#include <assert.h>
 #include "solver_equation.h"
 #include "colors.h"
 
