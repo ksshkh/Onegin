@@ -2,7 +2,6 @@
 #include <math.h>
 #include "solver_equation.h"
 #include "colors.h"
-#include "input_output.h"
 
 bool compare_doubles(double x, double y) {
   const double EPS = 1e-9;
