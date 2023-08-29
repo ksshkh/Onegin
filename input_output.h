@@ -1,15 +1,17 @@
-#ifndef TECHNICAL
-#define TECHNICAL
+#ifndef INPUT_OUTPUT
+#define INPUT_OUTPUT
+
+#include "solver_equation.h"
 
 /// @brief Number of roots
 enum num_of_roots {
   NO_ROOTS = 0, ///< No roots
   SINGLE_ROOT = 1, ///< Single root
   TWO_ROOTS = 2, ///< Two roots
-  INFINITY_ROOTS = 3 ///< Infinitie number of roots
+  INFINITY_ROOTS = 3 ///< Infinite number of roots
 };
 
-/// @brief Coefficient names for equation ax^2 + bx + c = 0
+/// @brief Coefficient for equation ax^2 + bx + c = 0
 struct coefficients_of_sq_equation {
   double a;///< The first coefficient
   double b;///< The second coefficient
@@ -44,7 +46,7 @@ double read_coeff(FILE* file);
 ///
 /// @return Structure with value of coefficients
 //----------------------------------------------------------------------------------------------
-coefficients_of_sq_equation save_coeffs(FILE* file);
+coefficients_of_sq_equation get_coeffs(FILE* file);
 
 //----------------------------------------------------------------------------------------------
 /// @brief Output results of program
