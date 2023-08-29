@@ -1,4 +1,4 @@
-make: main.o solver_equation.o input_output.o test_equation.o
+.PHONY build: main.o solver_equation.o input_output.o test_equation.o
 	g++ main.o solver_equation.o input_output.o test_equation.o -o solver_square
 main_user.o: main.cpp solver_equation.h colors.h input_output.h
 	g++ -c main.cpp
