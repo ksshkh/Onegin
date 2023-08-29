@@ -1,4 +1,5 @@
 #include <TXLib.h>
+#include <cstdlib>
 #include <math.h>
 #include "solver_equation.h"
 #include "test_equation.h"
@@ -6,6 +7,11 @@
 #include "colors.h"
 
 int main(int argc, const char* argv[]) {
+
+  // TODO: Maybe you can extract your args processing into something like:
+  // if (process_args(...))
+  //   return EXIT_FAILURE;
+    
 
   if (argc == 1) {
 
@@ -23,8 +29,8 @@ int main(int argc, const char* argv[]) {
     return 0;
   }
 
-  else if (strcmp(argv[1], "--help") == 0) {
-    printf("Enter --test to test the programm");
+  else if (strcmp(argv[1], "--help") == 0) { // 
+      printf("Enter --test to test the programm"); // TODO: program programme programmmmmmmmmmmmmmmmmmmmmmmmmmmmm
     return 0;
   }
 
@@ -34,7 +40,7 @@ int main(int argc, const char* argv[]) {
   }
 
   else {
-    printf("Run programm again and enter --test or --help");
+      printf("Run programm again and enter --test or --help"); // TODO: newline?
     return 0;
   }
 }

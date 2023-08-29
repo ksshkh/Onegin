@@ -1,8 +1,11 @@
-#include <TXLib.h>
+#include <TXLib.h> // TODO: Why do you need txlib here?
 #include <math.h>
-#include "solver_equation.h"
+#include "solver_equation.h" // TODO: unused header
 #include "colors.h"
 #include "input_output.h"
+
+
+// TODO: input_output
 
 void skip_word(void) {
   int c = 0;

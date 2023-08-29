@@ -14,6 +14,7 @@ clean:
 	rm -rf *.o
 	rm -rf solver_square.exe
 
+# TODO: Why so much extra lines?
 
 
 
