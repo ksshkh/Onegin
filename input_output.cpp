@@ -17,7 +17,7 @@ double read_coeff (FILE* file) {
   return number;
 }
 
-coefficients_of_sq_equation save_coefs_in_structure (FILE* file) {
+coefficients_of_sq_equation save_coeffs (FILE* file) {
   coefficients_of_sq_equation coef = {};
   coef.a = read_coeff(file);
   coef.b = read_coeff(file);
@@ -26,16 +26,16 @@ coefficients_of_sq_equation save_coefs_in_structure (FILE* file) {
   return coef;
 }
 
-void print_results_of_solving(solutions real_root) {
-  switch (real_root.nroots) {
+void print_results_of_solving(solutions counted_roots) {
+  switch (counted_roots.nroots) {
     case NO_ROOTS:
       printf(PINK("No roots.\n"));
       break;
     case SINGLE_ROOT:
-      printf(PINK("x = %.5lf\n"), real_root.x1);
+      printf(PINK("x = %.5lf\n"), counted_roots.x1);
       break;
     case TWO_ROOTS:
-      printf(PINK("x1 = %.5lf\nx2 = %.5lf\n"), real_root.x1, real_root.x2);
+      printf(PINK("x1 = %.5lf\nx2 = %.5lf\n"), counted_roots.x1, counted_roots.x2);
       break;
     case INFINITY_ROOTS:
       printf(PINK("x - any number.\n"));
@@ -44,4 +44,4 @@ void print_results_of_solving(solutions real_root) {
       assert(!"Reached default case!");
       break;
   }
-} // in->out документация изменить названия переменных
+}
