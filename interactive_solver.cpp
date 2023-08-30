@@ -1,8 +1,29 @@
 #include <stdio.h>
 #include <assert.h>
+#include <string.h>
 #include "colors.h"
 #include "interactive_solver.h"
 #include "test_equation.h"
+
+bool process_args(int argc, const char* argv[]) {
+  if (argc == 1) {
+    return false;
+  }
+  if (strcmp(argv[1], "--help") == 0) {
+    printf("Enter --test to test the program\n");
+    return true;
+  }
+
+  if (strcmp(argv[1], "--test") == 0) {
+    run_tests();
+    return true;
+  }
+  else {
+    printf("Run programm again and enter --test or --help\n");
+    return true;
+  }
+  return false;
+}
 
 void skip_word(void) {
   int c = 0;

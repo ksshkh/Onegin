@@ -53,4 +53,12 @@ coefficients_of_sq_equation get_coeffs(FILE* file);
 //----------------------------------------------------------------------------------------------
 void print_results_of_solving(solutions counted_roots);
 
+//----------------------------------------------------------------------------------------------
+/// @brief Check flags
+///
+/// @param [in]  argc
+/// @param [in]  argv
+//----------------------------------------------------------------------------------------------
+bool process_args(int argc, const char* argv[]);
+
 #endif

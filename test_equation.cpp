@@ -5,8 +5,16 @@
 #include "interactive_solver.h"
 #include "my_assert.h"
 
+const int SIZE = 10;
+
 void run_tests(void) {
-  FILE * test_file = fopen("tests.txt", "r"); // TODO: pass file as an argument
+
+  printf("Enter a name of the file with tests\n");
+
+  char name_file[SIZE];
+  gets(name_file);
+
+  FILE* test_file = fopen(name_file, "r"); // TODO: pass file as an argument
   CHECK(test_file != NULL);
 
   int passed_tests = 0;
